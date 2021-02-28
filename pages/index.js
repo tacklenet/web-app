@@ -1,16 +1,20 @@
 import Head from 'next/head';
+import Layout from '../components/Layout';
+import HeroCard from '../components/HeroCard';
+import Faq from '../components/Faq';
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Head>
         <title>Tackle.net - Fishing Tackle Network</title>
         <link rel='icon' href='/favicon.ico' />
       </Head>
 
-      <div>
-        <h1 className='text-9xl font-bold'>Tackle Net</h1>
-      </div>
-    </div>
+      <Layout>
+        <HeroCard />
+        <Faq />
+      </Layout>
+    </>
   );
 }
