@@ -1,0 +1,11 @@
+@import url('https://rsms.me/inter/inter.css');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.react-responsive-modal-modal {
+  border-radius: 10px;
+}
+.react-responsive-modal-closeButton {
+  display: none !important;
+}
