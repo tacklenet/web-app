@@ -6,7 +6,7 @@ const Navbar = () => {
       <nav className='bg-white shadow'>
         <div className='max-w-7xl mx-auto px-2 sm:px-4 lg:px-8'>
           <div className='flex justify-between h-16'>
-            <div className='flex px-2 lg:px-0'>
+            <div className='flex px-2 lg:px-0 mt-2 mb-2'>
               <div className='flex-shrink-0 flex items-center'>
                 <Link href='/'>
                   <a>
@@ -38,6 +38,13 @@ const Navbar = () => {
                 </Link>
               </div>
             </div>
+            <>
+              <a
+                href='/post'
+                className='mt-2 mb-2 ml-6 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-black hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black'>
+                Post Lure
+              </a>
+            </>
           </div>
         </div>
       </nav>

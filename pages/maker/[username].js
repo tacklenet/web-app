@@ -1,7 +1,7 @@
 import Head from 'next/head';
 import Layout from '../../components/Layout';
-
 import LuresDisplay from '../../components/LuresDisplay';
+import MetaTags from '../../components/MetaTags';
 
 export default function Home() {
   const array = [1, 2, 3, 4];

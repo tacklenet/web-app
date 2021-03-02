@@ -22,7 +22,7 @@ export default function footer() {
           </a>
 
           <a
-            href='https://discord.gg/5WtdRRX4'
+            href='https://discord.gg/hdYRSDFRhs'
             target='_blank'
             className='text-gray-400 hover:text-gray-500'>
             <span className='sr-only'>Discord</span>
@@ -64,7 +64,9 @@ export default function footer() {
           </a>
         </div>
         <div className='mt-8 md:mt-0 md:order-1'>
-          <p className='text-center text-base text-gray-400'>© Tackle.net</p>
+          <p className='text-center text-base text-gray-400'>
+            Tackle Network | Tackle.net
+          </p>
         </div>
       </div>
     </footer>

@@ -9,3 +9,7 @@
 .react-responsive-modal-closeButton {
   display: none !important;
 }
+
+.fancy-progress-bar {
+  background: #00b400 !important;
+}
