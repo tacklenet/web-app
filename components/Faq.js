@@ -3,7 +3,6 @@ import Link from 'next/link';
 export default function Faq() {
   return (
     <>
-      {/* This example requires Tailwind CSS v2.0+ */}
       <div className='bg-white'>
         <div className='pt-12 max-w-7xl mx-auto pb-16 px-4 divide-y-2 divide-gray-200 sm:pb-24 sm:px-6 lg:px-8'>
           <h2 className='text-3xl font-bold text-gray-900'>About Tackle.net</h2>

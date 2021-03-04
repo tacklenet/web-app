@@ -24,7 +24,7 @@ export async function getStaticProps({ params }) {
 }
 
 export async function getStaticPaths() {
-  const snapshot = await firestore.collection('users').get();
+  const snapshot = await firestore.collection('makers').get();
 
   const paths = snapshot.docs.map((doc) => {
     const { username } = doc.data();
