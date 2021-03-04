@@ -21,7 +21,7 @@ export async function getStaticProps({ params }) {
 
     return {
       props: { lure },
-      revalidate: 5000,
+      revalidate: 1000,
     };
   }
 }
@@ -48,7 +48,7 @@ export default function Lure(props) {
     <>
       <MetaTags
         title={`${lure?.name} by ${lure?.displayname} on Tackle.net`}
-        description={truncateString(lure.description, 140)}
+        description={truncateString(lure.description, 160)}
         image={lure.image}
       />
       <Layout>

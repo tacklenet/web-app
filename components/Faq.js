@@ -5,13 +5,7 @@ export default function Faq() {
     <>
       {/* This example requires Tailwind CSS v2.0+ */}
       <div className='bg-white'>
-        <div>
-          <img
-            src='/main.png'
-            className=' transition-opacity duration-1000 ease-out opacity-100 hover:opacity-0 w-64 mx-auto'
-          />
-        </div>
-        <div className='max-w-7xl mx-auto pb-16 px-4 divide-y-2 divide-gray-200 sm:pb-24 sm:px-6 lg:px-8'>
+        <div className='pt-12 max-w-7xl mx-auto pb-16 px-4 divide-y-2 divide-gray-200 sm:pb-24 sm:px-6 lg:px-8'>
           <h2 className='text-3xl font-bold text-gray-900'>About Tackle.net</h2>
           <div className='mt-6 pt-10'>
             <dl className='space-y-10 md:space-y-0 md:grid md:grid-cols-2 md:grid-rows-2 md:gap-x-8 md:gap-y-12'>
@@ -42,14 +36,14 @@ export default function Faq() {
               </div>
               <div>
                 <dt className='text-lg leading-6 font-medium text-gray-900'>
-                  🚀 Marketing & SEO Optimized
+                  🚀 Marketing & SEO Optimization
                 </dt>
                 <dd className='mt-2 text-base text-gray-500'>
                   While Instagram is a great place to share your lures, it’s
-                  often buried and within the walled confines of the FB empire.
+                  often buried and isolated within the walled confines of FB.
                   Tackle.net exposes your brand & lures to a new audience with
                   just a few simple clicks on a search engine friendly platform
-                  on an unbeatable domain.
+                  built on an unbeatable domain.
                 </dd>
               </div>
               <div>
@@ -57,15 +51,22 @@ export default function Faq() {
                   🔥 How do I post, edit and delete my lures?
                 </dt>
                 <dd className='mt-2 text-base text-gray-500'>
-                  Enter your lure details on the{' '}
+                  <Link href='/getKey'>
+                    <a
+                      className='hover:text-gray-800 underline'
+                      target='_blank'>
+                      Request a key
+                    </a>
+                  </Link>{' '}
+                  to{' '}
                   <Link href='/post'>
                     <a
                       className='hover:text-gray-800 underline'
                       target='_blank'>
-                      Post
+                      post
                     </a>
                   </Link>{' '}
-                  page and give it a few mins to appear on the{' '}
+                  your lures. Posts will appear on the{' '}
                   <Link href='/lures'>
                     <a
                       className='hover:text-gray-800 underline'
@@ -81,7 +82,7 @@ export default function Faq() {
                     target='_blank'>
                     @tacklenet
                   </a>{' '}
-                  with link(s). After you first post, we'll create a{' '}
+                  with link(s). After your first post, we'll create a{' '}
                   <Link href='/makers'>
                     <a
                       className='hover:text-gray-800 underline'
@@ -89,8 +90,8 @@ export default function Faq() {
                       Maker
                     </a>
                   </Link>{' '}
-                  page for you ie: https://tackle.net/maker/IG_Username. All
-                  links are shareable 🔗
+                  page for you, ie: https://tackle.net/maker/IG_Username. Every
+                  link is shareable.
                 </dd>
               </div>
               <div>
@@ -130,7 +131,7 @@ export default function Faq() {
               </div>
               <div>
                 <dt className='text-lg leading-6 font-medium text-gray-900'>
-                  🌱 Kickstart a Lure Project
+                  🌱 Kickstart a Project
                 </dt>
                 <dd className='mt-2 text-base text-gray-500'>
                   Have a unique lure project you’re looking to make but short on

@@ -39,11 +39,11 @@ const Navbar = () => {
               </div>
             </div>
             <>
-              <a
-                href='/post'
-                className='mt-2 mb-2 ml-6 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-black hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black'>
-                Post Lure
-              </a>
+              <Link href='/post'>
+                <a className='mt-2 mb-2 ml-6 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-black hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black'>
+                  Post Lure
+                </a>
+              </Link>
             </>
           </div>
         </div>

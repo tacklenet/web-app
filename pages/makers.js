@@ -35,7 +35,7 @@ export default function Makers({ makers }) {
 
           <main>
             <div className='max-w-7xl mx-auto sm:px-6 lg:px-8'>
-              <MakersDisplay makers={makers} />
+              <MakersDisplay makers={makers} key={makers.username} />
             </div>
           </main>
         </div>

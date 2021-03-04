@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import ReactDOM from 'react-dom';
 import 'react-responsive-modal/styles.css';
 import { Modal } from 'react-responsive-modal';
 import LureDetails from './LureDetails';
@@ -21,6 +20,7 @@ export default function LuresDisplay({ displayModal, lure }) {
   return (
     <>
       <div
+        key={lure.id}
         onClick={displayModal ? onOpenModal : handleClick}
         className='relative rounded-lg border border-gray-300 bg-white px-6 py-5 shadow-sm flex items-center space-x-3 hover:border-gray-400 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-black'>
         <div className='flex-shrink-0'>
@@ -29,33 +29,32 @@ export default function LuresDisplay({ displayModal, lure }) {
             src={lure?.image}
             alt={lure?.description && truncateString(lure?.description, 100)}
           />
-        </div>
-        <div className='flex-1 min-w-0'>
-          <a href='#' className='focus:outline-none'>
+        </div>{' '}
+        <a key={lure.id} href='#' className='focus:outline-none'>
+          <div className='flex-1 min-w-0 w-full'>
             <span className='absolute inset-0' aria-hidden='true' />
             {lure?.price && (
-              <p className='inline-flex items-center px-1.5 py-0.5 rounded-md text-md font-medium bg-gray-100 text-gray-800'>
-                {lure?.price}
-              </p>
+              <div className='inline-flex items-center px-1.5 py-0.5 rounded-md text-md font-medium bg-gray-100 text-gray-800'>
+                ${lure?.price}
+              </div>
             )}
-
-            <p className='ml-1 inline text-md font-bold text-gray-900'>
+            <div className='overflow-ellipsis  ml-1 inline-flex text-md font-bold text-gray-900'>
               {lure?.name}
-            </p>
-            <p className='text-sm text-gray-500 truncate ml-1 mt-2'>
+            </div>
+            <div className='overflow-ellipsis  text-sm text-gray-500 truncate ml-1 mt-2'>
               Made by {lure?.displayname}
-            </p>
+            </div>
             {lure?.type && (
               <span className='inline-flex items-center px-2.5 py-0.5 rounded-md text-sm font-medium bg-gray-100 text-gray-800'>
                 {lure?.type}
               </span>
             )}
-          </a>
-        </div>
+          </div>
+        </a>
       </div>
 
       <Modal open={open} onClose={onCloseModal} center>
-        <LureDetails />
+        <LureDetails lure={lure} />
       </Modal>
     </>
   );

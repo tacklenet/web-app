@@ -1,16 +1,48 @@
+import { useRouter } from 'next/router';
+
 import { useState } from 'react';
+import Link from 'next/link';
 import Layout from '../components/Layout';
 import MetaTags from '../components/MetaTags';
 
+import { categories, subToMain, toastConfig } from '../lib/utils';
 import { firestore, timestamp } from '../lib/firebase';
 import { toast } from 'react-toastify';
-var link = require('url');
+
+// const Web3Utils = require('web3-utils');
+
+const link = require('url');
 
 export default function Makers() {
   const [name, setName] = useState('');
   const [url, setUrl] = useState('');
   const [type, setType] = useState('');
   const [price, setPrice] = useState('');
+  // const [key, setKey] = useState('');
+  const [description, setDescription] = useState('');
+  // const [isValid, setIsValid] = useState(false);
+
+  const router = useRouter();
+
+  // const handleKey = (e) => {
+  //   e.preventDefault();
+  //   setKey(e.target.value);
+  //   setIsValid(false);
+  //   if (Web3Utils.isAddress(e.target.value)) {
+  //     setIsValid(true);
+  //   }
+  // };
+
+  const handlePrice = (e) => {
+    const val = e.target.value;
+    const max = 5001;
+
+    console.log(typeof val);
+    const maxLength = max.toString().length - 1;
+    const newVal =
+      val < max ? val : parseInt(val.toString().substring(0, maxLength));
+    setPrice(newVal);
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -18,26 +50,26 @@ export default function Makers() {
     var regExp = /\/p\/(.*?)\//;
     const id = url.match(regExp);
 
-    if (link.parse(url).host != 'www.instagram.com') {
-      setUrl('');
-      toast.error('Instagram links only', {
-        position: 'top-center',
-        autoClose: 5000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-      });
+    if (description.length < 18) {
+      toast.error('Description too short', toastConfig);
 
       return;
     }
+
+    if (link.parse(url).host != 'www.instagram.com') {
+      setUrl('');
+      toast.error('Instagram links only', toastConfig);
+
+      return;
+    }
+
     firestore.collection('submissions').add(
       {
         name: name,
-        url: 'https://instagram.com/p/' + id[1],
-        type: type,
-        price: price,
+        description: description,
+        category: subToMain(type),
+        subcategory: type,
+        price: parseFloat(price, 10).toFixed(2),
         id: id[1],
         timestamp: timestamp,
       },
@@ -46,19 +78,11 @@ export default function Makers() {
     setName('');
     setUrl('');
     setPrice('');
-    toast.dark(
-      '✅ Submitted. Your bait will appear on the Lures page in ~1 min.',
-      {
-        position: 'top-center',
-        autoClose: 15000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        progressClassName: 'fancy-progress-bar',
-      }
-    );
+    // setKey('');
+    //setIsValid(false);
+    setDescription('');
+    toast.dark('Your bait will appear in a minute 🎉', toastConfig);
+    router.push('/lures');
   };
 
   return (
@@ -74,7 +98,6 @@ export default function Makers() {
           <div className='rounded-md pt-2 pb-2 mt-2'>
             <div className='flex'>
               <div className='flex-shrink-0'>
-                {/* Heroicon name: solid/information-circle */}
                 <svg
                   className='h-5 w-5 text-black'
                   xmlns='http://www.w3.org/2000/svg'
@@ -93,11 +116,11 @@ export default function Makers() {
                   Please refer to the FAQ before posting.
                 </p>
                 <p className='mt-3 text-sm md:mt-0 md:ml-6'>
-                  <a
-                    href='/'
-                    className='whitespace-nowrap font-medium text-black hover:text-blue-600'>
-                    Details <span aria-hidden='true'>→</span>
-                  </a>
+                  <Link href='/'>
+                    <a className='whitespace-nowrap font-medium text-black hover:text-blue-600'>
+                      Details <span aria-hidden='true'>→</span>
+                    </a>
+                  </Link>
                 </p>
               </div>
             </div>
@@ -105,10 +128,31 @@ export default function Makers() {
           <main className='mt-5'>
             {/* Replace with your content */}
 
-            <div className='px-4 py-4 bg-white rounded-lg'>
+            <div className='px-4 py-4 mb-24 bg-white rounded-lg'>
               <div>
                 <form onSubmit={handleSubmit}>
-                  <div>
+                  {/* <div>
+                    <label
+                      htmlFor='name'
+                      className='block text-lg font-medium text-gray-700'>
+                      Enter your key to post
+                      <span className='ml-1 text-sm underline hover:text-black'>
+                        <Link href='/getkey' target='_blank'>
+                          (get key)
+                        </Link>
+                      </span>
+                    </label>
+                    <input
+                      disabled={isValid}
+                      type='text'
+                      value={isValid ? '✅ ' + key : key}
+                      onChange={handleKey}
+                      name='key'
+                      id='key'
+                      className='mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm border-gray-500 rounded-md'
+                    />
+                  </div> */}
+                  <div className='mt-4'>
                     <label
                       htmlFor='name'
                       className='block text-lg font-medium text-gray-700'>
@@ -122,6 +166,30 @@ export default function Makers() {
                       id='name'
                       className='mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm border-gray-500 rounded-md'
                     />
+                  </div>
+                  <div className='mt-4'>
+                    <div className='w-full sm:border-gray-200'>
+                      <label
+                        htmlFor='about'
+                        className='text-lg font-medium text-gray-700'>
+                        Description
+                      </label>
+                      <div className='mt-2'>
+                        <textarea
+                          id='description'
+                          name='description'
+                          rows={3}
+                          className=' shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-500 rounded-md'
+                          defaultValue={description}
+                          onChange={({ target }) =>
+                            setDescription(target.value)
+                          }
+                        />
+                        <p className='mt-2 text-sm text-gray-500'>
+                          Share specs, how it was made, how to fish it...
+                        </p>
+                      </div>
+                    </div>
                   </div>
 
                   <div className='mt-4'>
@@ -151,9 +219,17 @@ export default function Makers() {
                       value={type}
                       onChange={({ target }) => setType(target.value)}
                       className='mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md'>
-                      <option>Softbaits</option>
-                      <option>Hardbaits</option>
-                      <option>Topwater</option>
+                      <option selected value>
+                        Select
+                      </option>
+
+                      {categories.map((main) => (
+                        <optgroup label={main.main}>
+                          {main.sub.map((sub) => (
+                            <option key={sub}>{sub}</option>
+                          ))}
+                        </optgroup>
+                      ))}
                     </select>
                   </div>
                   <div className='mt-4'>
@@ -173,7 +249,7 @@ export default function Makers() {
                         type='number'
                         name='price'
                         id='price'
-                        onChange={({ target }) => setPrice(target.value)}
+                        onChange={handlePrice}
                         value={price}
                         className='focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-7 pr-12 sm:text-sm border-gray-300 rounded-md'
                         placeholder={0.0}
@@ -189,7 +265,7 @@ export default function Makers() {
                     </div>
                   </div>
 
-                  {name && url && type ? (
+                  {name && description && url && type ? (
                     <button
                       type='submit'
                       className='mx-auto mt-4 w-full inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-black hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black'>

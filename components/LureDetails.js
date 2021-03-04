@@ -1,35 +1,39 @@
+import Link from 'next/link';
 import { timeDisplay } from '../lib/utils';
 
 export default function LureDetails({ lure }) {
   return (
     <>
-      <div className='w-100'>
-        <img
-          className='object-cover overflow-hide rounded-md'
-          src={lure.image}
-        />
-      </div>
+      <img
+        className='w-full object-cover overflow-hide rounded-md'
+        src={lure?.image}
+      />
       <div className='flex-1 min-w-0 mt-3'>
         {lure?.price && (
           <p className='inline-flex items-center px-1.5 py-0.5 rounded-md text-lg font-medium bg-gray-100 text-gray-800'>
             ${lure?.price}
           </p>
         )}
-        <p className='ml-1 inline text-lg font-bold text-gray-900'>
+        <p className='ml-2 inline text-lg font-bold text-gray-900'>
           {lure?.name}
         </p>
-        <p className='text-sm text-gray-500 ml-2 mt-2'>{lure.description}</p>
-        <div className='mt-4 space-x-2'>
+        <p className='whitespace-pre-line text-sm text-gray-500 ml-2 mt-2'>
+          {lure?.description}
+        </p>
+        <div className='mt-6 space-x-2'>
           <span className='inline-flex items-center px-2.5 py-0.5 rounded-md text-sm font-medium bg-gray-100 text-gray-800'>
-            {lure?.type}
+            {lure?.category}
+          </span>
+          <span className='inline-flex items-center px-2.5 py-0.5 rounded-md text-sm font-medium bg-gray-100 text-gray-800'>
+            {lure?.subcategory}
           </span>
         </div>
 
-        <div className='text-sm text-gray-500 ml-2 mt-5'>
+        <div className='text-sm text-gray-500 ml-2 mt-4'>
           <div className='inline-block align-middle	'>
-            Posted on {timeDisplay(lure.created)}
+            Posted on {timeDisplay(lure?.created)}
           </div>
-          <a href={`https://instagram.com/p/${lure.id}`} target='_blank'>
+          <a href={`https://instagram.com/p/${lure?.id}`} target='_blank'>
             <div className='inline-block align-middle	 hover:text-gray-600 my-auto'>
               <svg
                 className='h-4 w-6 ml-1'
@@ -46,13 +50,15 @@ export default function LureDetails({ lure }) {
           </a>
         </div>
         <div className='text-sm text-gray-900 ml-2 mt-5'>
-          <a href={`/maker/${lure.username}`}>
-            <img
-              src={lure.avatar}
-              className='w-14 rounded-full shadow-md inline-block mr-2'
-            />
-            {lure.displayname}
-          </a>
+          <Link href={`/maker/${lure?.username}`}>
+            <a>
+              <img
+                src={lure?.avatar}
+                className='w-14 rounded-full shadow-md inline-block mr-2'
+              />
+              {lure?.displayname}
+            </a>
+          </Link>
         </div>
       </div>
     </>
