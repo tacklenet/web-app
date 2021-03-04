@@ -2,7 +2,7 @@ import Head from 'next/head';
 
 export default function Metatags({
   title = 'Tackle.net',
-  description = 'Handmade bass fishing lures made by local bait makers',
+  description = 'A fishing tackle network made for bait makers. Custom handmade swimbaits, bass lures, hard baits, soft plastics.',
   image = '/main.png',
 }) {
   return (
