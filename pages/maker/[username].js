@@ -19,7 +19,7 @@ export async function getStaticProps({ params }) {
 
   return {
     props: { user, lures },
-    revalidate: 2000,
+    revalidate: 60,
   };
 }
 
@@ -173,14 +173,23 @@ export default function Home({ user, lures }) {
           {/* Description list */}
           <div className='mt-6 max-w-5xl mx-auto px-4 sm:px-6 lg:px-8'>
             <dl className='grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2'>
-              <div class='sm:col-span-1'>
-                <dt class='text-sm font-medium text-gray-500'>IG Followers</dt>
-                <dd class='mt-1 text-sm text-gray-900'> 🧑‍🤝‍🧑 {user.followers}</dd>
+              <div className='sm:col-span-1'>
+                <dt className='text-sm font-medium text-gray-500'>
+                  IG Followers
+                </dt>
+                <dd className='mt-1 text-sm text-gray-900'>
+                  {' '}
+                  🧑‍🤝‍🧑 {user.followers}
+                </dd>
               </div>
 
-              <div class='sm:col-span-1'>
-                <dt class='text-sm font-medium text-gray-500'>Lures posted</dt>
-                <dd class='mt-1 text-sm text-gray-900'>🎣 {lures.length}</dd>
+              <div className='sm:col-span-1'>
+                <dt className='text-sm font-medium text-gray-500'>
+                  Lures posted
+                </dt>
+                <dd className='mt-1 text-sm text-gray-900'>
+                  🎣 {lures.length}
+                </dd>
               </div>
 
               <div className='sm:col-span-2'>
