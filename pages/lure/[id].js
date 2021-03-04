@@ -1,4 +1,3 @@
-import Head from 'next/head';
 import { firestore, postToJSON } from '../../lib/firebase';
 
 import MetaTags from '../../components/MetaTags';
