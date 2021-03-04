@@ -63,13 +63,20 @@ export default function Makers() {
       return;
     }
 
+    if (!url.includes('/p/')) {
+      setUrl('');
+      toast.error('Instagram posts only', toastConfig);
+
+      return;
+    }
+
     firestore.collection('submissions').add(
       {
         name: name,
         description: description,
         category: subToMain(type),
         subcategory: type,
-        price: parseFloat(price, 10).toFixed(2),
+        price: price ? parseFloat(price, 10).toFixed(2) : null,
         id: id[1],
         timestamp: timestamp,
       },
@@ -113,12 +120,13 @@ export default function Makers() {
               </div>
               <div className='ml-3 flex-1 md:flex md:justify-between'>
                 <p className='text-sm text-black'>
-                  Please refer to the FAQ before posting.
+                  Tackle.net is in open beta testing. Please backup your post
+                  details.
                 </p>
                 <p className='mt-3 text-sm md:mt-0 md:ml-6'>
                   <Link href='/'>
                     <a className='whitespace-nowrap font-medium text-black hover:text-blue-600'>
-                      Details <span aria-hidden='true'>→</span>
+                      More details <span aria-hidden='true'>→</span>
                     </a>
                   </Link>
                 </p>
@@ -196,7 +204,7 @@ export default function Makers() {
                     <label
                       htmlFor='url'
                       className='block text-lg font-medium text-gray-700'>
-                      Instagram URL
+                      Instagram Post URL
                     </label>
                     <input
                       type='url'

@@ -75,13 +75,13 @@ export default function Home({ user, lures }) {
                 </div>
                 <div className='mt-6 sm:flex-1 sm:min-w-0 sm:flex sm:items-center sm:justify-end sm:space-x-6 sm:pb-1'>
                   <div className='sm:hidden 2xl:block mt-6 min-w-0 flex-1'>
-                    <h1 className='inline-block text-2xl font-bold text-gray-900 truncate'>
+                    <h1 className='align-middle inline-block text-2xl font-bold text-gray-900 truncate'>
                       {user.displayname}
                     </h1>
                     <a
                       href={`https://instagram.com/${user.username}`}
                       target='_blank'>
-                      <div className='inline-block pb-1 hover:text-gray-600'>
+                      <div className='inline-block align-middle hover:text-gray-600'>
                         <svg
                           className='h-6 w-6 ml-1'
                           fill='currentColor'

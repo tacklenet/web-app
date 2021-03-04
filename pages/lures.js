@@ -31,14 +31,14 @@ export default function Lures({ lures }) {
       <Layout>
         <div className='px-4 pb-24'>
           <div className='mt-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-            <h1 className='inline-block text-3xl font-bold leading-tight text-gray-900'>
+            <h1 className='align-middle inline-block text-3xl font-bold leading-tight text-gray-900'>
               Lures
             </h1>
             <div
               onClick={handleRefresh}
-              className='ml-3 cursor-pointer inline-block text-sm  hover:text-gray-700 hover:no-underline'>
+              className='align-middle ml-3 cursor-pointer inline-block text-sm  hover:text-gray-700 hover:no-underline'>
               <span className='no-underline'>🔄</span>
-              <span className='ml-1 underline hover:no-underline'>Refresh</span>
+              <span className='ml-1 hover:underline no-underline'>Refresh</span>
             </div>
           </div>
 
