@@ -121,7 +121,7 @@ export default function Makers() {
               <div className='ml-3 flex-1 md:flex md:justify-between'>
                 <p className='text-sm text-black'>
                   Tackle.net is in open beta testing. Please backup your post
-                  details as data maybe wiped.
+                  details as data may be wiped.
                 </p>
                 <p className='mt-3 text-sm md:mt-0 md:ml-6'>
                   <Link href='/'>
