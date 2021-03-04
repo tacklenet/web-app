@@ -1,0 +1,111 @@
+[debug] [2021-03-04T14:23:41.411Z] ----------------------------------------------------------------------
+[debug] [2021-03-04T14:23:41.412Z] Command:       /usr/local/Cellar/node/14.5.0/bin/node /usr/local/bin/firebase deploy
+[debug] [2021-03-04T14:23:41.413Z] CLI Version:   9.5.0
+[debug] [2021-03-04T14:23:41.413Z] Platform:      darwin
+[debug] [2021-03-04T14:23:41.413Z] Node Version:  v14.5.0
+[debug] [2021-03-04T14:23:41.413Z] Time:          Thu Mar 04 2021 14:23:41 GMT+0000 (Greenwich Mean Time)
+[debug] [2021-03-04T14:23:41.414Z] ----------------------------------------------------------------------
+[debug] [2021-03-04T14:23:41.414Z] 
+[debug] [2021-03-04T14:23:41.416Z] >>> [apiv2][query] GET https://firebase-public.firebaseio.com/cli.json [none]
+[debug] [2021-03-04T14:23:41.436Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-03-04T14:23:41.436Z] > authorizing via signed-in user
+[debug] [2021-03-04T14:23:41.436Z] [iam] checking project tackle-net for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-03-04T14:23:41.437Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-03-04T14:23:41.438Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-03-04T14:23:41.630Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","date":"Thu, 04 Mar 2021 14:23:41 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","expires":"Mon, 01 Jan 1990 00:00:00 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-04T14:23:41.657Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/tackle-net:testIamPermissions  
+ {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-03-04T14:23:41.844Z] <<< [apiv2][status] GET https://firebase-public.firebaseio.com/cli.json 200
+[debug] [2021-03-04T14:23:41.844Z] <<< [apiv2][body] GET https://firebase-public.firebaseio.com/cli.json {"cloudBuildErrorAfter":1594252800000,"cloudBuildWarnAfter":1590019200000,"defaultNode10After":1594252800000,"minVersion":"3.0.5","node8DeploysDisabledAfter":1613390400000,"node8RuntimeDisabledAfter":1615809600000,"node8WarnAfter":1600128000000}
+[debug] [2021-03-04T14:23:42.325Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 04 Mar 2021 14:23:42 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=555","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-04T14:23:42.326Z] >>> HTTP REQUEST POST https://iam.googleapis.com/v1/projects/tackle-net/serviceAccounts/tackle-net@appspot.gserviceaccount.com:testIamPermissions  
+ {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2021-03-04T14:23:43.170Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 04 Mar 2021 14:23:43 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-04T14:23:43.171Z] > refreshing access token with scopes: []
+[debug] [2021-03-04T14:23:43.171Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-03-04T14:23:43.282Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Thu, 04 Mar 2021 14:23:43 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-04T14:23:43.310Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/tackle-net [none]
+[debug] [2021-03-04T14:23:43.556Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/tackle-net 200
+[debug] [2021-03-04T14:23:43.556Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/tackle-net {"projectId":"tackle-net","projectNumber":"183643467954","displayName":"Tacklenet","name":"projects/tackle-net","resources":{"hostingSite":"tackle-net","storageBucket":"tackle-net.appspot.com","locationId":"us-central"},"state":"ACTIVE"}
+[debug] [2021-03-04T14:23:43.677Z] TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string. Received undefined
+    at validateString (internal/validators.js:121:11)
+    at Object.join (path.js:1039:7)
+    at Object.checkFunctionsSDKVersion [as fn] (/usr/local/lib/node_modules/firebase-tools/lib/checkFirebaseSDKVersion.js:34:28)
+    at /usr/local/lib/node_modules/firebase-tools/lib/command.js:161:30
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2021-03-04T14:23:52.180Z] ----------------------------------------------------------------------
+[debug] [2021-03-04T14:23:52.181Z] Command:       /usr/local/Cellar/node/14.5.0/bin/node /usr/local/bin/firebase deploy
+[debug] [2021-03-04T14:23:52.182Z] CLI Version:   9.5.0
+[debug] [2021-03-04T14:23:52.182Z] Platform:      darwin
+[debug] [2021-03-04T14:23:52.182Z] Node Version:  v14.5.0
+[debug] [2021-03-04T14:23:52.182Z] Time:          Thu Mar 04 2021 14:23:52 GMT+0000 (Greenwich Mean Time)
+[debug] [2021-03-04T14:23:52.183Z] ----------------------------------------------------------------------
+[debug] [2021-03-04T14:23:52.183Z] 
+[debug] [2021-03-04T14:23:52.187Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-03-04T14:23:52.187Z] > authorizing via signed-in user
+[debug] [2021-03-04T14:23:52.187Z] [iam] checking project tackle-net for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-03-04T14:23:52.189Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-03-04T14:23:52.189Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-03-04T14:23:52.331Z] <<< HTTP RESPONSE 200 {"cache-control":"no-cache, no-store, max-age=0, must-revalidate","pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Thu, 04 Mar 2021 14:23:52 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-04T14:23:52.360Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/tackle-net:testIamPermissions  
+ {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-03-04T14:23:52.554Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 04 Mar 2021 14:23:52 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=114","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-04T14:23:52.555Z] >>> HTTP REQUEST POST https://iam.googleapis.com/v1/projects/tackle-net/serviceAccounts/tackle-net@appspot.gserviceaccount.com:testIamPermissions  
+ {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2021-03-04T14:23:53.319Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 04 Mar 2021 14:23:53 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-04T14:23:53.321Z] > refreshing access token with scopes: []
+[debug] [2021-03-04T14:23:53.321Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-03-04T14:23:53.428Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","cache-control":"no-cache, no-store, max-age=0, must-revalidate","date":"Thu, 04 Mar 2021 14:23:53 GMT","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-04T14:23:53.457Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/tackle-net [none]
+[debug] [2021-03-04T14:23:53.671Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/tackle-net 200
+[debug] [2021-03-04T14:23:53.672Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/tackle-net {"projectId":"tackle-net","projectNumber":"183643467954","displayName":"Tacklenet","name":"projects/tackle-net","resources":{"hostingSite":"tackle-net","storageBucket":"tackle-net.appspot.com","locationId":"us-central"},"state":"ACTIVE"}
+[debug] [2021-03-04T14:23:53.759Z] TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string. Received undefined
+    at validateString (internal/validators.js:121:11)
+    at Object.join (path.js:1039:7)
+    at Object.checkFunctionsSDKVersion [as fn] (/usr/local/lib/node_modules/firebase-tools/lib/checkFirebaseSDKVersion.js:34:28)
+    at /usr/local/lib/node_modules/firebase-tools/lib/command.js:161:30
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[error] 
+[error] Error: An unexpected error has occurred.
+[debug] [2021-03-04T14:24:47.365Z] ----------------------------------------------------------------------
+[debug] [2021-03-04T14:24:47.367Z] Command:       /usr/local/Cellar/node/14.5.0/bin/node /usr/local/bin/firebase deploy
+[debug] [2021-03-04T14:24:47.367Z] CLI Version:   9.5.0
+[debug] [2021-03-04T14:24:47.367Z] Platform:      darwin
+[debug] [2021-03-04T14:24:47.367Z] Node Version:  v14.5.0
+[debug] [2021-03-04T14:24:47.368Z] Time:          Thu Mar 04 2021 14:24:47 GMT+0000 (Greenwich Mean Time)
+[debug] [2021-03-04T14:24:47.368Z] ----------------------------------------------------------------------
+[debug] [2021-03-04T14:24:47.368Z] 
+[debug] [2021-03-04T14:24:47.373Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2021-03-04T14:24:47.373Z] > authorizing via signed-in user
+[debug] [2021-03-04T14:24:47.374Z] [iam] checking project tackle-net for permissions ["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2021-03-04T14:24:47.375Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2021-03-04T14:24:47.375Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-03-04T14:24:47.516Z] <<< HTTP RESPONSE 200 {"pragma":"no-cache","expires":"Mon, 01 Jan 1990 00:00:00 GMT","date":"Thu, 04 Mar 2021 14:24:47 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-04T14:24:47.545Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/tackle-net:testIamPermissions  
+ {"permissions":["cloudfunctions.functions.create","cloudfunctions.functions.delete","cloudfunctions.functions.get","cloudfunctions.functions.list","cloudfunctions.functions.update","cloudfunctions.operations.get","firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2021-03-04T14:24:48.310Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 04 Mar 2021 14:24:48 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=540","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-04T14:24:48.311Z] >>> HTTP REQUEST POST https://iam.googleapis.com/v1/projects/tackle-net/serviceAccounts/tackle-net@appspot.gserviceaccount.com:testIamPermissions  
+ {"permissions":["iam.serviceAccounts.actAs"]}
+[debug] [2021-03-04T14:24:48.504Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Thu, 04 Mar 2021 14:24:48 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-04T14:24:48.506Z] > refreshing access token with scopes: []
+[debug] [2021-03-04T14:24:48.506Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2021-03-04T14:24:48.627Z] <<< HTTP RESPONSE 200 {"expires":"Mon, 01 Jan 1990 00:00:00 GMT","pragma":"no-cache","date":"Thu, 04 Mar 2021 14:24:48 GMT","cache-control":"no-cache, no-store, max-age=0, must-revalidate","content-type":"application/json; charset=utf-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","server":"scaffolding on HTTPServer2","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-T051=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2021-03-04T14:24:48.657Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/tackle-net [none]
+[debug] [2021-03-04T14:24:48.908Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/tackle-net 200
+[debug] [2021-03-04T14:24:48.908Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/tackle-net {"projectId":"tackle-net","projectNumber":"183643467954","displayName":"Tacklenet","name":"projects/tackle-net","resources":{"hostingSite":"tackle-net","storageBucket":"tackle-net.appspot.com","locationId":"us-central"},"state":"ACTIVE"}
+[debug] [2021-03-04T14:24:48.995Z] TypeError [ERR_INVALID_ARG_TYPE]: The "path" argument must be of type string. Received undefined
+    at validateString (internal/validators.js:121:11)
+    at Object.join (path.js:1039:7)
+    at Object.checkFunctionsSDKVersion [as fn] (/usr/local/lib/node_modules/firebase-tools/lib/checkFirebaseSDKVersion.js:34:28)
+    at /usr/local/lib/node_modules/firebase-tools/lib/command.js:161:30
+    at processTicksAndRejections (internal/process/task_queues.js:93:5)
+[error] 
+[error] Error: An unexpected error has occurred.

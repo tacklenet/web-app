@@ -34,15 +34,16 @@ export default function LuresDisplay({ displayModal, lure }) {
           <div className='flex-1 min-w-0 w-full'>
             <span className='absolute inset-0' aria-hidden='true' />
             {lure?.price && (
-              <div className='inline-flex items-center px-1.5 py-0.5 rounded-md text-md font-medium bg-gray-100 text-gray-800'>
+              <div className='w-20 text-center md:inline-block items-center px-1.5 py-0.5 rounded-md text-md font-medium bg-gray-100 text-gray-800'>
                 ${lure?.price}
               </div>
             )}
-            <div className='overflow-ellipsis  ml-1 inline-flex text-md font-bold text-gray-900'>
+            <div className='block md:inline-block overflow-ellipsis  ml-1  text-md font-bold text-gray-900'>
               {lure?.name}
             </div>
             <div className='overflow-ellipsis  text-sm text-gray-500 truncate ml-1 mt-2'>
-              Made by {lure?.displayname}
+              <span className='hidden md:inline-block'>Made by</span>{' '}
+              {lure?.displayname}
             </div>
             {lure?.type && (
               <span className='inline-flex items-center px-2.5 py-0.5 rounded-md text-sm font-medium bg-gray-100 text-gray-800'>

@@ -35,4 +35,5 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 
 ## Deploy on Firebase
 
+Unable to deploy due to SSG Fallback set to True. Using Vercel now.
 npm run build && npm run export && firebase deploy
