@@ -3,7 +3,7 @@ import Layout from '../components/Layout';
 import LuresDisplay from '../components/LuresDisplay';
 import { truncateString } from '../lib/utils';
 
-import { getUserWithUsername, firestore, postToJSON } from '../../lib/firebase';
+import { getUserWithUsername, firestore, postToJSON } from '../lib/firebase';
 
 export async function getStaticProps({ params }) {
   const { username } = params;
