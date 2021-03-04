@@ -89,8 +89,8 @@ export default function Faq() {
                       Maker
                     </a>
                   </Link>{' '}
-                  page for you, ie: https://tackle.net/maker/IG_Username. Every
-                  link is shareable.
+                  page for you, ie: https://tackle.net/Username. Every link is
+                  shareable.
                 </dd>
               </div>
               <div>
