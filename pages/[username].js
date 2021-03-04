@@ -1,7 +1,7 @@
-import MetaTags from '../../components/MetaTags';
-import Layout from '../../components/Layout';
-import LuresDisplay from '../../components/LuresDisplay';
-import { truncateString } from '../../lib/utils';
+import MetaTags from '../components/MetaTags';
+import Layout from '../components/Layout';
+import LuresDisplay from '../components/LuresDisplay';
+import { truncateString } from '../lib/utils';
 
 import { getUserWithUsername, firestore, postToJSON } from '../../lib/firebase';
 

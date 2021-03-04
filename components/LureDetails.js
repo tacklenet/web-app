@@ -50,7 +50,7 @@ export default function LureDetails({ lure }) {
           </a>
         </div>
         <div className='text-sm text-gray-900 ml-2 mt-5'>
-          <Link href={`/maker/${lure?.username}`}>
+          <Link href={`/${lure?.username}`}>
             <a>
               <img
                 src={lure?.avatar}

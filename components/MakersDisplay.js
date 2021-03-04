@@ -7,7 +7,7 @@ const MakersDisplay = ({ makers }) => {
         <div className='space-y-12'>
           <ul className='mx-auto space-y-16 sm:grid  sm:gap-16 sm:space-y-0 md:grid-cols-2 lg:grid-cols-3 lg:max-w-5xl'>
             {makers.map((maker) => (
-              <Link key={maker.username} href={`/maker/${maker.username}`}>
+              <Link key={maker.username} href={`/${maker.username}`}>
                 <li>
                   <div className='space-y-6'>
                     <img
