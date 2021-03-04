@@ -6,14 +6,14 @@ import MetaTags from '../components/MetaTags';
 
 export async function getStaticProps() {
   const makersQuery = await firestore
-    .collection('users')
+    .collection('makers')
     .orderBy('timestamp', 'desc')
     .get();
   const makers = makersQuery.docs.map(postToJSON);
 
   return {
     props: { makers },
-    revalidate: 5000,
+    revalidate: 60,
   };
 }
 

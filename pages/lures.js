@@ -12,7 +12,7 @@ export async function getStaticProps() {
 
   return {
     props: { lures },
-    revalidate: 5000,
+    revalidate: 60,
   };
 }
 

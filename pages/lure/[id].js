@@ -20,7 +20,7 @@ export async function getStaticProps({ params }) {
 
     return {
       props: { lure },
-      revalidate: 60,
+      revalidate: 300,
     };
   }
 }
