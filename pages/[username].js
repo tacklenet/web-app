@@ -202,7 +202,7 @@ export default function Maker({ user, lures }) {
           <h2 className='text-sm font-medium text-gray-500'>Lures</h2>
           <div className='mt-1 grid grid-cols-1 gap-4 sm:grid-cols-2'>
             {lures.map((lure) => (
-              <LuresDisplay key={lure.id} lure={lure} displayModal={true} />
+              <LuresDisplay key={lure.id} lure={lure} />
             ))}
           </div>
         </div>

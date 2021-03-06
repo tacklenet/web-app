@@ -34,7 +34,7 @@ export default function LureDetails({ lure }) {
             Posted on {timeDisplay(lure?.created)}
           </div>
           <a href={`https://instagram.com/p/${lure?.id}`} target='_blank'>
-            <div className='inline-block align-middle	 hover:text-gray-600 my-auto'>
+            <div className='outline-none inline-block align-middle	 hover:text-gray-600 my-auto'>
               <svg
                 className='h-4 w-6 ml-1'
                 fill='currentColor'

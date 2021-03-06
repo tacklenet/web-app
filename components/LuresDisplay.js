@@ -1,16 +1,11 @@
 import React, { useState } from 'react';
 import 'react-responsive-modal/styles.css';
-import { Modal } from 'react-responsive-modal';
+
 import LureDetails from './LureDetails';
 import { useRouter } from 'next/router';
 import { truncateString } from '../lib/utils';
 
-export default function LuresDisplay({ displayModal, lure }) {
-  const [open, setOpen] = useState(false);
-
-  const onOpenModal = () => setOpen(true);
-  const onCloseModal = () => setOpen(false);
-
+export default function LuresDisplay({ lure }) {
   const router = useRouter();
 
   const handleClick = (e) => {
@@ -21,7 +16,7 @@ export default function LuresDisplay({ displayModal, lure }) {
     <>
       <div
         key={lure.id}
-        onClick={displayModal ? onOpenModal : handleClick}
+        onClick={handleClick}
         className='relative rounded-lg border border-gray-300 bg-white px-6 py-5 shadow-sm flex items-center space-x-3 hover:border-gray-400 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-black'>
         <div className='flex-shrink-0'>
           <img
@@ -53,10 +48,6 @@ export default function LuresDisplay({ displayModal, lure }) {
           </div>
         </a>
       </div>
-
-      <Modal open={open} onClose={onCloseModal} center>
-        <LureDetails lure={lure} />
-      </Modal>
     </>
   );
 }
