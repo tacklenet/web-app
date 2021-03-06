@@ -48,8 +48,8 @@ export default function Faq() {
                       Maker
                     </a>
                   </Link>{' '}
-                  page with your IG details, ie: https://tackle.net/Username.
-                  Every link is shareable, so share away!
+                  page with your IG details, ie: tackle.net/username. Every link
+                  is shareable, so share away!
                 </dd>
               </div>
               <div>
