@@ -19,7 +19,11 @@ const HeroCard = () => {
               />
             </div>
             <div className='relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8'>
-              <img className='mx-auto w-64 mb-4' src='/logo-full.png' />
+              <img
+                className='mx-auto w-64 mb-4'
+                src='/logo-full.png'
+                alt='Tackle.net Logo'
+              />
 
               <h1 className='text-center text-xl font-semibold tracking-tight sm:text-3xl'>
                 <span className='block text-white'>
