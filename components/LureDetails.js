@@ -20,6 +20,24 @@ export default function LureDetails({ lure }) {
         <p className='whitespace-pre-line text-sm text-gray-500 ml-2 mt-2'>
           {lure?.description}
         </p>
+        <div className='mt-4 space-x-2'>
+          <a href={`https://instagram.com/${lure?.username}`} target='_blank'>
+            <button
+              type='button'
+              className='inline-flex justify-center px-4 py-2 border border-gray-300 shadow-sm text-sm font-medium rounded-md text-white bg-black hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black'>
+              <svg
+                className='-ml-1 mr-2 h-5 w-5 text-white'
+                xmlns='http://www.w3.org/2000/svg'
+                viewBox='0 0 20 20'
+                fill='currentColor'
+                aria-hidden='true'>
+                <path d='M2 5a2 2 0 012-2h7a2 2 0 012 2v4a2 2 0 01-2 2H9l-3 3v-3H4a2 2 0 01-2-2V5z' />
+                <path d='M15 7v2a4 4 0 01-4 4H9.828l-1.766 1.767c.28.149.599.233.938.233h2l3 3v-3h2a2 2 0 002-2V9a2 2 0 00-2-2h-1z' />
+              </svg>
+              DM for Details
+            </button>
+          </a>
+        </div>
         <div className='mt-6 space-x-2'>
           <span className='inline-flex items-center px-2.5 py-0.5 rounded-md text-sm font-medium bg-gray-100 text-gray-800'>
             {lure?.category}
