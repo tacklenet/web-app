@@ -1,11 +1,10 @@
-import Image from 'next/image';
 import Link from 'next/link';
 import { timeDisplay } from '../lib/utils';
 
 export default function LureDetails({ lure }) {
   return (
     <>
-      <Image
+      <img
         className='w-full object-cover overflow-hide rounded-md'
         src={lure?.image}
       />

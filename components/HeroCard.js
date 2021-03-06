@@ -13,18 +13,23 @@ const HeroCard = () => {
                 className='h-full w-full object-cover'
                 src='/topwater.jpg'
                 alt='Tackle.net Cover'
+                layout='fill'
               />
+
               <div
                 className='absolute inset-0 bg-gray-600'
                 style={{ mixBlendMode: 'multiply' }}
               />
             </div>
             <div className='relative px-4 py-16 sm:px-6 sm:py-24 lg:py-32 lg:px-8'>
-              <Image
-                className='mx-auto w-64 mb-4'
-                src='/logo-full.png'
-                alt='Tackle.net Logo'
-              />
+              <div className='mx-auto w-64 mb-4'>
+                <Image
+                  src='/logo-full.png'
+                  alt='Tackle.net Logo'
+                  width='800'
+                  height='213'
+                />
+              </div>
 
               <h1 className='text-center text-xl font-semibold tracking-tight sm:text-3xl'>
                 <span className='block text-white'>
