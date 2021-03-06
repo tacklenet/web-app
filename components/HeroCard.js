@@ -37,7 +37,7 @@ const HeroCard = () => {
                       Showcase your work
                     </a>
                   </Link>
-                  <div className='text-sm text-center text-white font-thin'>
+                  <div className='text-sm text-center text-white italic'>
                     See all the benefits below
                   </div>
                 </div>

@@ -16,21 +16,8 @@ export default function Faq() {
                   Made by bait makers for bait makers. The goal of Tackle.net is
                   to help empower the bait making community. We are here to help
                   each other reach their full potential. This web app is just
-                  part of the network. Find us on{' '}
-                  <a
-                    className='hover:text-gray-800 underline'
-                    href='https://discord.gg/TbWExVqQ'
-                    target='_blank'>
-                    Discord
-                  </a>{' '}
-                  &{' '}
-                  <a
-                    className='hover:text-gray-800 underline'
-                    href='https://instagram.com/tacklenet'
-                    target='_blank'>
-                    Instagram
-                  </a>{' '}
-                  for more.
+                  part of the network. Find us on Discord & Instagram (links in
+                  the footer).
                 </dd>
               </div>
               <div>
@@ -50,38 +37,10 @@ export default function Faq() {
                   🔥 How do I post, edit and delete my lures?
                 </dt>
                 <dd className='mt-2 text-base text-gray-500'>
-                  <Link href='/getKey'>
-                    <a
-                      className='hover:text-gray-800 underline'
-                      target='_blank'>
-                      Request a key
-                    </a>
-                  </Link>{' '}
-                  to{' '}
-                  <Link href='/post'>
-                    <a
-                      className='hover:text-gray-800 underline'
-                      target='_blank'>
-                      post
-                    </a>
-                  </Link>{' '}
-                  your lures. Posts will appear on the{' '}
-                  <Link href='/lures'>
-                    <a
-                      className='hover:text-gray-800 underline'
-                      target='_blank'>
-                      Lures
-                    </a>
-                  </Link>{' '}
-                  page. To modify a post just repost it. For deleting a lure,
-                  contact{' '}
-                  <a
-                    className='hover:text-gray-800 underline'
-                    href='https://instagram.com/tacklenet'
-                    target='_blank'>
-                    @tacklenet
-                  </a>{' '}
-                  with link(s). After your first post, we'll create a{' '}
+                  Posting lures is currently open to everyone during beta
+                  testing. To modify a post just repost it. For deleting a lure,
+                  contact @tacklenet with link(s). After your first post, we'll
+                  create a{' '}
                   <Link href='/makers'>
                     <a
                       className='hover:text-gray-800 underline'
@@ -89,8 +48,8 @@ export default function Faq() {
                       Maker
                     </a>
                   </Link>{' '}
-                  page for you, ie: https://tackle.net/Username. Every link is
-                  shareable.
+                  page with your IG details, ie: https://tackle.net/Username.
+                  Every link is shareable, so share away!
                 </dd>
               </div>
               <div>

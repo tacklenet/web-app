@@ -7,10 +7,10 @@ export default function Home() {
   return (
     <>
       <MetaTags />
-      <Layout>
-        <HeroCard />
-        <Faq />
-      </Layout>
+      <HeroCard />
+      <Faq />
     </>
   );
 }
+
+Home.layout = Layout;

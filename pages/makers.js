@@ -25,21 +25,20 @@ export default function Makers({ makers }) {
         description='Explore handmade bait makers and the latest bass lures to help you catch more fish'
       />
 
-      <Layout>
-        <div className='px-4 pb-12'>
-          <div className='mt-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
-            <h1 className='text-3xl font-bold leading-tight text-gray-900'>
-              Makers
-            </h1>
-          </div>
-
-          <main>
-            <div className='max-w-7xl mx-auto sm:px-6 lg:px-8'>
-              <MakersDisplay makers={makers} key={makers.username} />
-            </div>
-          </main>
+      <div className='px-4 pb-12'>
+        <div className='mt-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
+          <h1 className='text-3xl font-bold leading-tight text-gray-900'>
+            Makers
+          </h1>
         </div>
-      </Layout>
+
+        <main>
+          <div className='max-w-7xl mx-auto sm:px-6 lg:px-8'>
+            <MakersDisplay makers={makers} key={makers.username} />
+          </div>
+        </main>
+      </div>
     </>
   );
 }
+Makers.layout = Layout;

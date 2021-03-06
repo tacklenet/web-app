@@ -50,13 +50,12 @@ export default function Lure(props) {
         description={truncateString(lure.description, 160)}
         image={lure.image}
       />
-      <Layout>
-        <div className='bg-white overflow-hidden shadow rounded-lg my-12 mx-auto max-w-2xl '>
-          <div className='px-4 py-5 sm:p-6'>
-            <LureDetails lure={lure} />
-          </div>
+      <div className='bg-white overflow-hidden shadow rounded-lg my-12 mx-auto max-w-2xl '>
+        <div className='px-4 py-5 sm:p-6'>
+          <LureDetails lure={lure} />
         </div>
-      </Layout>
+      </div>
     </>
   );
 }
+Lure.layout = Layout;

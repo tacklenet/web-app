@@ -9,6 +9,8 @@ export default function Metatags({
     <Head>
       <title>{title}</title>
       <link rel='icon' href='/favicon.ico' />
+      <meta name='viewport' content='initial-scale=1.0, width=device-width' />
+
       <meta name='twitter:card' content='summary' />
       <meta name='twitter:site' content='@tacklenet' />
       <meta name='twitter:title' content={title} />
