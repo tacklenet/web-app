@@ -1,22 +1,11 @@
-import React, { useState } from 'react';
-import 'react-responsive-modal/styles.css';
-
-import LureDetails from './LureDetails';
-import { useRouter } from 'next/router';
+import Link from 'next/link';
 import { truncateString } from '../lib/utils';
 
 export default function LuresDisplay({ lure }) {
-  const router = useRouter();
-
-  const handleClick = (e) => {
-    e.preventDefault();
-    router.push(`/lure/${lure.id}`);
-  };
   return (
-    <>
+    <Link href={`/lure/${lure.id}`}>
       <div
         key={lure.id}
-        onClick={handleClick}
         className='relative rounded-lg border border-gray-300 bg-white px-6 py-5 shadow-sm flex items-center space-x-3 hover:border-gray-400 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-black'>
         <div className='flex-shrink-0'>
           <img
@@ -48,6 +37,6 @@ export default function LuresDisplay({ lure }) {
           </div>
         </a>
       </div>
-    </>
+    </Link>
   );
 }

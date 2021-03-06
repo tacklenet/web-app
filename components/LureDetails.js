@@ -56,7 +56,7 @@ export default function LureDetails({ lure }) {
                 src={lure?.avatar}
                 className='w-14 rounded-full shadow-md inline-block mr-2'
               />
-              <span className='text-md font-semibold text-gray-900 hover:underline'>
+              <span className='text-md font-semibold text-gray-700 hover:underline'>
                 {lure?.displayname}
               </span>
             </a>
