@@ -40,7 +40,7 @@ export default function Resources({ resources }) {
                     <img
                       src={URL + item.img}
                       alt={item.title}
-                      className='w-32'
+                      className='w-32 h-32 object-cover'
                     />
                   </span>
                 </div>
