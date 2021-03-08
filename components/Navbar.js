@@ -23,7 +23,7 @@ const Navbar = () => {
                   </a>
                 </Link>
               </div>
-              <div className='ml-10 flex space-x-8'>
+              <div className='ml-5 flex space-x-3'>
                 <Link href='/makers'>
                   <a className='border-transparent text-gray-900  hover:border-gray-300 hover:text-gray-600 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium'>
                     Makers
@@ -34,6 +34,13 @@ const Navbar = () => {
                     href='#'
                     className='border-transparent text-gray-900 hover:border-gray-300 hover:text-gray-600 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium'>
                     Lures
+                  </a>
+                </Link>
+                <Link href='/resources'>
+                  <a
+                    href='#'
+                    className='border-transparent text-gray-900 hover:border-gray-300 hover:text-gray-600 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium'>
+                    Resources
                   </a>
                 </Link>
               </div>
