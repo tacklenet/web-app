@@ -24,14 +24,14 @@ export default function Lures({ lures }) {
   return (
     <>
       <MetaTags
-        title='Lures on Tackle.net'
+        title='Tackle Lures & Items on Tackle.net'
         description='Disover unique, handmade bass lures made my local bait makers.'
       />
 
       <div className='px-4 pb-24'>
         <div className='mt-12 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8'>
           <h1 className='align-middle inline-block text-3xl font-bold leading-tight text-gray-900'>
-            Lures
+            Items
           </h1>
           <div
             onClick={handleRefresh}

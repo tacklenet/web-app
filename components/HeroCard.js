@@ -33,12 +33,12 @@ const HeroCard = () => {
 
               <h1 className='text-center text-xl font-semibold tracking-tight sm:text-3xl'>
                 <span className='block text-white'>
-                  A fishing tackle network for bait makers.
+                  A fishing tackle network
                 </span>
               </h1>
 
               <div className='mx-auto text-center text-white pt-10 text-lg font-light italic'>
-                Do you make baits?
+                Are you a maker?
               </div>
               <div className='mt-2 mx-auto sm:flex justify-center'>
                 <div className='space-y-4 sm:space-y-0 sm:inline-grid sm:grid-cols-1 sm:gap-5'>

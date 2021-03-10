@@ -33,7 +33,7 @@ const Navbar = () => {
                   <a
                     href='#'
                     className='border-transparent text-gray-900 hover:border-gray-300 hover:text-gray-600 inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium'>
-                    Lures
+                    Items
                   </a>
                 </Link>
                 <Link href='/resources'>
@@ -48,7 +48,7 @@ const Navbar = () => {
             <>
               <Link href='/post'>
                 <a className='mt-2 mb-2 ml-6 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-black hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black'>
-                  Post <div className='ml-1 hidden sm:block'> Lure</div>
+                  Post <div className='ml-1 hidden sm:block'> Tackle</div>
                 </a>
               </Link>
             </>

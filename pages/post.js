@@ -99,7 +99,7 @@ export default function Post() {
       <div className='px-4 lg:px-12 max-w-7xl mx-auto'>
         <div className='mt-12'>
           <h1 className='text-3xl font-bold leading-tight text-gray-900'>
-            Post Lure
+            Post Tackle
           </h1>
         </div>
         <div className='rounded-md pt-2 pb-2 mt-2'>
@@ -164,7 +164,7 @@ export default function Post() {
                   <label
                     htmlFor='name'
                     className='block text-lg font-medium text-gray-700'>
-                    Lure Name
+                    Name
                   </label>
                   <input
                     type='text'
@@ -217,7 +217,7 @@ export default function Post() {
                   <label
                     htmlFor='location'
                     className='block text-lg font-medium text-gray-700'>
-                    Lure Type
+                    Type
                   </label>
                   <select
                     id='type'
