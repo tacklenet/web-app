@@ -102,8 +102,8 @@ export default function Maker({ user, lures }) {
               </li>
 
               {user.links && user.links.length != 0
-                ? user.links.map((link) => (
-                    <li key={link.key} className='px-6 -mt-3'>
+                ? user.links.map((link, index) => (
+                    <li key={index} className='px-6 -mt-3'>
                       <LinkDisplay
                         title={link.title}
                         url={link.url}

@@ -4,7 +4,6 @@ import { UserContext } from '../lib/context';
 
 import Layout from '../components/Layout';
 import MetaTags from '../components/MetaTags';
-import Logout from '../components/Logout';
 
 export default function Settings() {
   const { username, user } = useContext(UserContext);
@@ -37,14 +36,14 @@ export default function Settings() {
               <li className='px-4 py-4 sm:px-6'>
                 <div className='text-md font-bold text-gray-900'>
                   <span className='mr-2 font-bold'>Email</span>
-                  <span className='font-normal'>{user.email}</span>
+                  <span className='font-normal'>{user?.email}</span>
                 </div>
               </li>
 
               <li className='px-4 py-4 sm:px-6'>
                 <div className='text-md font-bold text-gray-900'>
                   <span className='mr-2 font-bold'>UID</span>
-                  <span className='font-normal'>{user.uid}</span>
+                  <span className='font-normal'>{user?.uid}</span>
                 </div>
               </li>
             </ul>
