@@ -2,7 +2,6 @@ const axios = require('axios');
 
 import { useState, useEffect, useContext } from 'react';
 import { UserContext } from '../lib/context';
-import Link from 'next/link';
 
 import SubmitLinks from '../components/SubmitLinks';
 import Layout from '../components/Layout';
