@@ -1,3 +1,4 @@
+import Link from 'next/link';
 export default function footer() {
   return (
     <footer className='bg-white pin-b'>
@@ -22,7 +23,7 @@ export default function footer() {
           </a>
 
           <a
-            href='https://discord.gg/hdYRSDFRhs'
+            href='https://discord.gg/XEfqSPP6Fu'
             target='_blank'
             className='text-gray-400 hover:text-gray-500'>
             <span className='sr-only'>Discord</span>
@@ -65,7 +66,10 @@ export default function footer() {
         </div>
         <div className='mt-8 md:mt-0 md:order-1'>
           <p className='text-center text-base text-gray-400'>
-            Tackle Network | Tackle.net
+            Tackle Network ∙{' '}
+            <Link href='/about'>
+              <a className='hover:underline'>About</a>
+            </Link>
           </p>
         </div>
       </div>

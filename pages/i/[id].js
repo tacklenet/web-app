@@ -51,7 +51,7 @@ export default function Lure(props) {
         image={lure.image}
       />
       <div className='bg-white overflow-hidden shadow rounded-lg my-12 mx-auto max-w-2xl '>
-        <div className='px-4 py-5 sm:p-6'>
+        <div className='pb-6'>
           <LureDetails lure={lure} />
         </div>
       </div>

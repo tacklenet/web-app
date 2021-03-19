@@ -17,7 +17,7 @@ const HeroCard = () => {
               />
 
               <div
-                className='absolute inset-0 bg-gray-600'
+                className='absolute inset-0 bg-gray-400'
                 style={{ mixBlendMode: 'multiply' }}
               />
             </div>
@@ -32,24 +32,16 @@ const HeroCard = () => {
               </div>
 
               <h1 className='text-center text-xl font-semibold tracking-tight sm:text-3xl'>
-                <span className='block text-white'>
-                  A fishing tackle network
-                </span>
+                <span className='text-white'>A fishing tackle network</span>
               </h1>
 
-              <div className='mx-auto text-center text-white pt-10 text-lg font-light italic'>
-                Are you a maker?
-              </div>
-              <div className='mt-2 mx-auto sm:flex justify-center'>
+              <div className='mt-5 mx-auto sm:flex justify-center'>
                 <div className='space-y-4 sm:space-y-0 sm:inline-grid sm:grid-cols-1 sm:gap-5'>
-                  <Link href='/post'>
+                  <Link href='/about'>
                     <a className='flex items-center justify-center px-4 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-black bg-white hover:text-white hover:bg-black sm:px-8 transition duration-500 ease-in-out'>
-                      Showcase your work
+                      Learn more
                     </a>
                   </Link>
-                  <div className='text-sm text-center text-white italic'>
-                    See all the benefits below
-                  </div>
                 </div>
               </div>
             </div>

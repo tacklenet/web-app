@@ -34,13 +34,13 @@ export default function Resources({ resources }) {
             {resources.resources.map((item) => (
               <div
                 key={item.title}
-                className='rounded-tl-lg rounded-tr-lg sm:rounded-tr-none relative group bg-white p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-black'>
+                className='hover:opacity-80 text-center rounded-tl-lg rounded-tr-lg sm:rounded-tr-none relative group bg-white p-6 focus-within:ring-2 focus-within:ring-inset focus-within:ring-black'>
                 <div>
                   <span className='rounded-lg inline-flex p-3 bg-teal-50 text-teal-700 ring-4 ring-white'>
                     <img
                       src={URL + item.img}
                       alt={item.title}
-                      className='w-32 h-32 object-cover'
+                      className='w-64 h-64 object-fit rounded-xl'
                     />
                   </span>
                 </div>

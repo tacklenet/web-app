@@ -5,10 +5,10 @@ export default function LureDetails({ lure }) {
   return (
     <>
       <img
-        className='w-full object-cover overflow-hide rounded-md'
+        className='w-full object-cover overflow-hide rounded-t-md'
         src={lure?.image}
       />
-      <div className='flex-1 min-w-0 mt-3'>
+      <div className='flex-1 min-w-0 mt-3 px-6'>
         {lure?.price && (
           <p className='inline-flex items-center px-1.5 py-0.5 rounded-md text-lg font-medium bg-gray-100 text-gray-800'>
             ${lure?.price}

@@ -1,43 +1,32 @@
 import { useRouter } from 'next/router';
-
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import Link from 'next/link';
-import Layout from '../components/Layout';
-import MetaTags from '../components/MetaTags';
 
+import { toast } from 'react-toastify';
 import { categories, subToMain, toastConfig } from '../lib/utils';
 import { firestore, timestamp } from '../lib/firebase';
-import { toast } from 'react-toastify';
 
-// const Web3Utils = require('web3-utils');
+import { UserContext } from '../lib/context';
+import Layout from '../components/Layout';
+import MetaTags from '../components/MetaTags';
 
 const link = require('url');
 
 export default function Post() {
+  const { user, username } = useContext(UserContext);
+
   const [name, setName] = useState('');
   const [url, setUrl] = useState('');
   const [type, setType] = useState('');
   const [price, setPrice] = useState('');
-  // const [key, setKey] = useState('');
   const [description, setDescription] = useState('');
-  // const [isValid, setIsValid] = useState(false);
 
   const router = useRouter();
-
-  // const handleKey = (e) => {
-  //   e.preventDefault();
-  //   setKey(e.target.value);
-  //   setIsValid(false);
-  //   if (Web3Utils.isAddress(e.target.value)) {
-  //     setIsValid(true);
-  //   }
-  // };
 
   const handlePrice = (e) => {
     const val = e.target.value;
     const max = 5001;
 
-    console.log(typeof val);
     const maxLength = max.toString().length - 1;
     const newVal =
       val < max ? val : parseInt(val.toString().substring(0, maxLength));
@@ -79,14 +68,14 @@ export default function Post() {
         price: price ? parseFloat(price, 10).toFixed(2) : null,
         id: id[1],
         timestamp: timestamp,
+        username: username,
+        uid: user.uid,
       },
       { merge: true }
     );
     setName('');
     setUrl('');
     setPrice('');
-    // setKey('');
-    //setIsValid(false);
     setDescription('');
     toast.dark('Your bait will appear in a minute 🎉', toastConfig);
     router.push('/lures');
@@ -120,11 +109,10 @@ export default function Post() {
             </div>
             <div className='ml-3 flex-1 md:flex md:justify-between'>
               <p className='text-sm text-black'>
-                Tackle.net is in open beta testing. Please backup your post
-                details as data may be wiped.
+                Post tackle from your Instagram
               </p>
               <p className='mt-3 text-sm md:mt-0 md:ml-6'>
-                <Link href='/'>
+                <Link href='/about'>
                   <a className='whitespace-nowrap font-medium text-black hover:text-blue-600'>
                     More details <span aria-hidden='true'>→</span>
                   </a>
@@ -134,32 +122,9 @@ export default function Post() {
           </div>
         </div>
         <main className='mt-5'>
-          {/* Replace with your content */}
-
           <div className='px-4 py-4 mb-24 bg-white rounded-lg'>
             <div>
               <form onSubmit={handleSubmit}>
-                {/* <div>
-                    <label
-                      htmlFor='name'
-                      className='block text-lg font-medium text-gray-700'>
-                      Enter your key to post
-                      <span className='ml-1 text-sm underline hover:text-black'>
-                        <Link href='/getkey' target='_blank'>
-                          (get key)
-                        </Link>
-                      </span>
-                    </label>
-                    <input
-                      disabled={isValid}
-                      type='text'
-                      value={isValid ? '✅ ' + key : key}
-                      onChange={handleKey}
-                      name='key'
-                      id='key'
-                      className='mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm border-gray-500 rounded-md'
-                    />
-                  </div> */}
                 <div className='mt-4'>
                   <label
                     htmlFor='name'
@@ -172,7 +137,7 @@ export default function Post() {
                     onChange={({ target }) => setName(target.value)}
                     name='name'
                     id='name'
-                    className='mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm border-gray-500 rounded-md'
+                    className='mt-1 focus:ring-black focus:border-black block w-full shadow-sm border-gray-500 rounded-md'
                   />
                 </div>
                 <div className='mt-4'>
@@ -187,7 +152,7 @@ export default function Post() {
                         id='description'
                         name='description'
                         rows={3}
-                        className=' shadow-sm block w-full focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm border-gray-500 rounded-md'
+                        className=' shadow-sm block w-full focus:ring-black focus:border-black sm:text-sm border-gray-500 rounded-md'
                         defaultValue={description}
                         onChange={({ target }) => setDescription(target.value)}
                       />
@@ -210,7 +175,7 @@ export default function Post() {
                     onChange={({ target }) => setUrl(target.value)}
                     name='url'
                     id='url'
-                    className='mt-1 focus:ring-indigo-500 focus:border-indigo-500 block w-full shadow-sm border-gray-500 rounded-md'
+                    className='mt-1 focus:ring-black focus:border-black block w-full shadow-sm border-gray-500 rounded-md'
                   />
                 </div>
                 <div className='mt-4'>
@@ -224,7 +189,7 @@ export default function Post() {
                     name='type'
                     value={type}
                     onChange={({ target }) => setType(target.value)}
-                    className='mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm rounded-md'>
+                    className='mt-1 block w-full pl-3 pr-10 py-2 text-base border-gray-300 focus:outline-none focus:ring-black focus:border-black sm:text-sm rounded-md'>
                     <option defaultValue>Select</option>
 
                     {categories.map((main) => (
@@ -255,7 +220,7 @@ export default function Post() {
                       id='price'
                       onChange={handlePrice}
                       value={price}
-                      className='focus:ring-indigo-500 focus:border-indigo-500 block w-full pl-7 pr-12 sm:text-sm border-gray-300 rounded-md'
+                      className='focus:ring-black focus:border-black block w-full pl-7 pr-12 sm:text-sm border-gray-300 rounded-md'
                       placeholder={0.0}
                       aria-describedby='price-currency'
                     />
@@ -279,15 +244,13 @@ export default function Post() {
                   <button
                     disabled
                     type='submit'
-                    className='mx-auto mt-4 w-full inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500'>
+                    className='mx-auto mt-4 w-full inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-gray-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black'>
                     Post
                   </button>
                 )}
               </form>
             </div>
           </div>
-
-          {/* /End replace */}
         </main>
       </div>
     </>
