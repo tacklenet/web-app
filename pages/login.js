@@ -71,7 +71,7 @@ export default function Login() {
             </div>
             <div className='ml-3 flex-1 md:flex md:justify-between'>
               <p className='text-sm text-black'>
-                Requires an invite code. Contact a{' '}
+                Invite only. Contact a{' '}
                 <Link href='/makers'>
                   <span className='underline cursor-pointer'>maker</span>
                 </Link>{' '}
