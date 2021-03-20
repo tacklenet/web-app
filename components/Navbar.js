@@ -26,7 +26,7 @@ const Navbar = () => {
                   </a>
                 </Link>
               </div>
-              <div className='ml-5 flex space-x-3'>
+              <div className='ml-5 flex space-x-5'>
                 <Link href='/makers'>
                   <a className='border-transparent text-gray-900  hover:border-gray-300 hover:text-gray-600 inline-flex items-center px-1 sm:px-3 pt-1 border-b-2 text-sm font-medium'>
                     Makers

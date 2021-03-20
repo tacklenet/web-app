@@ -9,11 +9,11 @@ export default function LuresDisplay({ lure }) {
         className='relative rounded-lg border border-gray-300 bg-white  shadow-sm flex items-center space-x-3 hover:border-gray-400 focus-within:ring-2 focus-within:ring-offset-2 focus-within:ring-black'>
         <div className='flex-shrink-0'>
           <img
-            className='h-48 w-48 rounded-l-lg object-cover'
+            className='h-32 w-32 sm:h-48 sm:w-48 rounded-l-lg object-cover'
             src={lure?.image}
             alt={lure?.description && truncateString(lure?.description, 100)}
           />
-        </div>{' '}
+        </div>
         <a key={lure.id} href='#' className='focus:outline-none'>
           <div className='flex-1 min-w-0 w-full'>
             <span className='absolute inset-0' aria-hidden='true' />

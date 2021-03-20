@@ -1,8 +1,7 @@
 import { useRouter } from 'next/router';
-
 import { useState, useContext } from 'react';
-import { UserContext } from '../lib/context';
 
+import { UserContext } from '../lib/context';
 import { toastConfig } from '../lib/utils';
 import { firestore } from '../lib/firebase';
 import { toast } from 'react-toastify';
