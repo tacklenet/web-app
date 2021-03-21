@@ -6,7 +6,7 @@ import Layout from '../components/Layout';
 import MetaTags from '../components/MetaTags';
 
 export default function Settings() {
-  const { username, user } = useContext(UserContext);
+  const { username, user, referral } = useContext(UserContext);
 
   return (
     <>
@@ -46,6 +46,16 @@ export default function Settings() {
                   <span className='font-normal'>{user?.uid}</span>
                 </div>
               </li>
+              <Link href={`/${referral}`}>
+                <a className='block hover:bg-gray-50'>
+                  <li className='px-4 py-4 sm:px-6 '>
+                    <div className='text-md font-bold text-gray-900'>
+                      <span className='mr-2 font-bold'>Referred by</span>
+                      <span className='font-normal'>{referral}</span>
+                    </div>
+                  </li>
+                </a>
+              </Link>
             </ul>
           </div>
         </main>
