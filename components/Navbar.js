@@ -3,7 +3,8 @@ import Link from 'next/link';
 import { UserContext } from '../lib/context';
 
 const Navbar = () => {
-  const { user, loading } = useContext(UserContext);
+  const { user, loading, maker } = useContext(UserContext);
+
   return (
     <>
       <nav className='bg-white shadow'>
@@ -43,9 +44,16 @@ const Navbar = () => {
             {!loading &&
               (user !== null ? (
                 <Link href='/tools'>
-                  <a className='mt-2 mb-2 ml-6 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-black hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black'>
-                    Tools
-                  </a>
+                  {maker ? (
+                    <img
+                      className='cursor-pointer h-12 w-12 mt-2 mr-2 shadow-xl inline-flex rounded-full'
+                      src={maker.avatar}
+                    />
+                  ) : (
+                    <a className='mt-2 mb-2 ml-6 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-black hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-black'>
+                      Tools
+                    </a>
+                  )}
                 </Link>
               ) : (
                 <Link href='/login'>

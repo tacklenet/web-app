@@ -43,6 +43,7 @@ export async function getStaticPaths() {
 
 export default function Lure(props) {
   const { lure } = props;
+
   return (
     <>
       <MetaTags

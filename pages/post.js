@@ -108,9 +108,7 @@ export default function Post() {
               </svg>
             </div>
             <div className='ml-3 flex-1 md:flex md:justify-between'>
-              <p className='text-sm text-black'>
-                Post tackle from your Instagram
-              </p>
+              <p className='text-sm text-black'>Showcase your creations </p>
               <p className='mt-3 text-sm md:mt-0 md:ml-6'>
                 <Link href='/about'>
                   <a className='whitespace-nowrap font-medium text-black hover:text-blue-600'>

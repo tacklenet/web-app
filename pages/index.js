@@ -9,12 +9,13 @@ export async function getStaticProps() {
   const makersQuery = await firestore
     .collection('makers')
     .orderBy('timestamp', 'desc')
+    .limit(12)
     .get();
   const makers = makersQuery.docs.map(postToJSON);
 
   return {
     props: { makers },
-    revalidate: 6000,
+    revalidate: 100,
   };
 }
 

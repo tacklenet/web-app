@@ -5,9 +5,16 @@ import { UserContext } from '../lib/context';
 import Layout from '../components/Layout';
 import MetaTags from '../components/MetaTags';
 
-export default function Settings() {
-  const { username, user, referral } = useContext(UserContext);
+import en from 'relative-time-format/locale/en.json';
+import TimeAgo from 'javascript-time-ago';
 
+TimeAgo.addLocale(en);
+const timeAgo = new TimeAgo('en-US');
+
+export default function Settings() {
+  const { username, user, referral, maker } = useContext(UserContext);
+
+  console.log(maker);
   return (
     <>
       <MetaTags title='Maker Settings on Tackle.net' />
@@ -56,6 +63,18 @@ export default function Settings() {
                   </li>
                 </a>
               </Link>
+
+              <li className='px-4 py-4 sm:px-6'>
+                <div className='text-md font-bold text-gray-900'>
+                  <span className='mr-2 font-bold'>Joined</span>
+                  <span className='font-normal'>
+                    {maker &&
+                      timeAgo.format(
+                        new Date(maker?.timestamp) - 24 * 60 * 60 * 1000
+                      )}
+                  </span>
+                </div>
+              </li>
             </ul>
           </div>
         </main>

@@ -8,7 +8,7 @@ import InviteInput from '../components/InviteInput';
 import Logout from '../components/Logout';
 
 export default function Tools() {
-  const { username, loading } = useContext(UserContext);
+  const { username, loading, maker } = useContext(UserContext);
 
   return (
     <>
@@ -16,9 +16,22 @@ export default function Tools() {
 
       <div className='px-4 lg:px-12 max-w-7xl mx-auto'>
         <div className='mt-12'>
-          <h1 className='text-3xl font-bold leading-tight text-gray-900'>
-            Maker Tools
-          </h1>
+          {maker ? (
+            <>
+              <img
+                className='mb-5 h-36 w-36 shadow-xl rounded-full mx-auto'
+                src={maker?.avatar}
+              />
+              <h1 className='text-2xl text-center font-bold leading-tight text-gray-900'>
+                {maker?.displayname}
+              </h1>
+              <h3 className='select-all ml-2 text-gray-500 text-sm font-normal text-center'>
+                {`https://tackle.net/${username}`}
+              </h3>
+            </>
+          ) : (
+            <div className='mx-auto loader ease-linear rounded-full border-4 border-t-4 border-gray-200 h-36 w-36 mb-5'></div>
+          )}
         </div>
 
         {!loading &&
@@ -34,12 +47,7 @@ export default function Tools() {
                       <li className='px-4 py-4 sm:px-6'>
                         <div className='text-md font-bold text-gray-900'>
                           👤
-                          <span className='ml-2'>
-                            My Profile
-                            <span className='ml-2 text-gray-500 text-sm font-normal'>
-                              {`tackle.net/${username}`}
-                            </span>
-                          </span>
+                          <span className='ml-2'>My Profile</span>
                         </div>
                       </li>
                     </a>
@@ -75,7 +83,7 @@ export default function Tools() {
                     <a className='block hover:bg-gray-50'>
                       <li className='px-4 py-4 sm:px-6'>
                         <div className='text-md font-bold text-gray-900'>
-                          📨 <span className='ml-2'>Invite a Maker</span>
+                          📨 <span className='ml-2'>Invite</span>
                         </div>
                       </li>
                     </a>
