@@ -1,6 +1,6 @@
 import axios from 'axios';
-import Layout from '../components/Layout';
-import MetaTags from '../components/MetaTags';
+import Layout from '@/components/Layout';
+import MetaTags from '@/components/MetaTags';
 
 const URL = 'https://tacklenet.github.io/resources/';
 export async function getStaticProps() {

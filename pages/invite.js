@@ -1,13 +1,13 @@
 import { useState, useContext } from 'react';
-import { firestore } from '../lib/firebase';
-import { UserContext } from '../lib/context';
+import { firestore } from '@/lib/firebase';
+import { UserContext } from '@/lib/context';
 
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 const Wallet = require('ethereumjs-wallet').default;
 
-import Layout from '../components/Layout';
-import MetaTags from '../components/MetaTags';
+import Layout from '@/components/Layout';
+import MetaTags from '@/components/MetaTags';
 
 export default function Invite() {
   const { user, username } = useContext(UserContext);

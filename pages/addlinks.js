@@ -1,14 +1,14 @@
 const axios = require('axios');
 
 import { useState, useEffect, useContext } from 'react';
-import { UserContext } from '../lib/context';
+import { UserContext } from '@/lib/context';
 
-import SubmitLinks from '../components/SubmitLinks';
-import Layout from '../components/Layout';
-import MetaTags from '../components/MetaTags';
+import SubmitLinks from '@/components/SubmitLinks';
+import Layout from '@/components/Layout';
+import MetaTags from '@/components/MetaTags';
 
-import { toastConfig, urlDomain, validateUrl } from '../lib/utils';
-import { firestore } from '../lib/firebase';
+import { toastConfig, urlDomain, validateUrl } from '@/lib/utils';
+import { firestore } from '@/lib/firebase';
 import { toast } from 'react-toastify';
 
 const link = require('url');

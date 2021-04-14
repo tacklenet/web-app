@@ -3,12 +3,12 @@ import { useState, useContext } from 'react';
 import Link from 'next/link';
 
 import { toast } from 'react-toastify';
-import { categories, subToMain, toastConfig } from '../lib/utils';
-import { firestore, timestamp } from '../lib/firebase';
+import { categories, subToMain, toastConfig } from '@/lib/utils';
+import { firestore, timestamp } from '@/lib/firebase';
 
-import { UserContext } from '../lib/context';
-import Layout from '../components/Layout';
-import MetaTags from '../components/MetaTags';
+import { UserContext } from '@/lib/context';
+import Layout from '@/components/Layout';
+import MetaTags from '@/components/MetaTags';
 
 const link = require('url');
 

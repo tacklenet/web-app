@@ -4,8 +4,8 @@ import Link from 'next/link';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 const Wallet = require('ethereumjs-wallet').default;
-import Layout from '../components/Layout';
-import MetaTags from '../components/MetaTags';
+import Layout from '@/components/Layout';
+import MetaTags from '@/components/MetaTags';
 
 export default function GetKey() {
   const [isGenerated, setIsGenerated] = useState(false);

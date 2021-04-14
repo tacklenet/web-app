@@ -1,9 +1,9 @@
-import { firestore, postToJSON } from '../../lib/firebase';
+import { firestore, postToJSON } from '@/lib/firebase';
 
-import MetaTags from '../../components/MetaTags';
-import Layout from '../../components/Layout';
-import LureDetails from '../../components/LureDetails';
-import { truncateString } from '../../lib/utils';
+import MetaTags from '@/components/MetaTags';
+import Layout from '@/components/Layout';
+import LureDetails from '@/components/LureDetails';
+import { truncateString } from '@/lib/utils';
 
 export async function getStaticProps({ params }) {
   const { id } = params;

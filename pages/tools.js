@@ -1,11 +1,11 @@
 import { useContext } from 'react';
 import Link from 'next/link';
-import { UserContext } from '../lib/context';
+import { UserContext } from '@/lib/context';
 
-import Layout from '../components/Layout';
-import MetaTags from '../components/MetaTags';
-import InviteInput from '../components/InviteInput';
-import Logout from '../components/Logout';
+import Layout from '@/components/Layout';
+import MetaTags from '@/components/MetaTags';
+import InviteInput from '@/components/InviteInput';
+import Logout from '@/components/Logout';
 
 export default function Tools() {
   const { username, loading, maker } = useContext(UserContext);
@@ -83,7 +83,7 @@ export default function Tools() {
                     <a className='block hover:bg-gray-50'>
                       <li className='px-4 py-4 sm:px-6'>
                         <div className='text-md font-bold text-gray-900'>
-                          📨 <span className='ml-2'>Invite</span>
+                          📨 <span className='ml-2'>Invite Makers</span>
                         </div>
                       </li>
                     </a>

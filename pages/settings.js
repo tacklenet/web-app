@@ -1,9 +1,9 @@
 import { useContext } from 'react';
 import Link from 'next/link';
-import { UserContext } from '../lib/context';
+import { UserContext } from '@/lib/context';
 
-import Layout from '../components/Layout';
-import MetaTags from '../components/MetaTags';
+import Layout from '@/components/Layout';
+import MetaTags from '@/components/MetaTags';
 
 import en from 'relative-time-format/locale/en.json';
 import TimeAgo from 'javascript-time-ago';

@@ -1,9 +1,9 @@
-import { firestore, postToJSON } from '../lib/firebase';
+import { firestore, postToJSON } from '@/lib/firebase';
 
-import Layout from '../components/Layout';
-import HeroCard from '../components/HeroCard';
-import MetaTags from '../components/MetaTags';
-import MakersDisplay from '../components/MakersDisplay';
+import Layout from '@/components/Layout';
+import HeroCard from '@/components/HeroCard';
+import MetaTags from '@/components/MetaTags';
+import MakersDisplay from '@/components/MakersDisplay';
 
 export async function getStaticProps() {
   const makersQuery = await firestore

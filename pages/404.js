@@ -1,7 +1,7 @@
 import Link from 'next/link';
 
-import Layout from '../components/Layout';
-import MetaTags from '../components/MetaTags';
+import Layout from '@/components/Layout';
+import MetaTags from '@/components/MetaTags';
 
 export default function Custom404() {
   return (
@@ -10,7 +10,7 @@ export default function Custom404() {
 
       <div className='px-4 lg:px-12 max-w-7xl mx-auto'>
         <div className='mt-12 text-center'>
-          <h1 className='text-4xl font-bold mb-2'>🤫 Oops...</h1>
+          <h1 className='text-4xl font-bold mb-2'>🤫 Oops@.</h1>
           <iframe
             className='mx-auto'
             src='https://giphy.com/embed/l2JehQ2GitHGdVG9y'

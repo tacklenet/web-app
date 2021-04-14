@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { timeDisplay } from '../lib/utils';
+import { timeDisplay, textToUrl } from '../lib/utils';
 
 export default function LureDetails({ lure }) {
   return (
@@ -39,12 +39,20 @@ export default function LureDetails({ lure }) {
           </a>
         </div>
         <div className='mt-6 space-x-2'>
-          <span className='inline-flex items-center px-2.5 py-0.5 rounded-md text-sm font-medium bg-gray-100 text-gray-800'>
-            {lure?.category}
-          </span>
-          <span className='inline-flex items-center px-2.5 py-0.5 rounded-md text-sm font-medium bg-gray-100 text-gray-800'>
-            {lure?.subcategory}
-          </span>
+          <Link href={`/tags/${textToUrl(lure?.category)}`}>
+            <a>
+              <span className='inline-flex items-center px-2.5 py-0.5 rounded-md text-sm font-medium bg-gray-100 text-gray-800 hover:bg-gray-300 hover:text-gray-600'>
+                {lure?.category}
+              </span>
+            </a>
+          </Link>
+          <Link href={`/tags/${textToUrl(lure?.subcategory)}`}>
+            <a>
+              <span className='inline-flex items-center px-2.5 py-0.5 rounded-md text-sm font-medium bg-gray-100 text-gray-800 hover:bg-gray-300 hover-text-gray-600'>
+                {lure?.subcategory}
+              </span>
+            </a>
+          </Link>
         </div>
 
         <div className='text-sm text-gray-500 ml-2 mt-4'>

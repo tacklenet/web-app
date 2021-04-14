@@ -4,11 +4,11 @@ import { useRouter } from 'next/router';
 
 import { Magic } from 'magic-sdk';
 import { toast } from 'react-toastify';
-import { toastConfig } from '../lib/utils';
-import firebase from '../lib/firebase';
+import { toastConfig } from '@/lib/utils';
+import firebase from '@/lib/firebase';
 
-import Layout from '../components/Layout';
-import MetaTags from '../components/MetaTags';
+import Layout from '@/components/Layout';
+import MetaTags from '@/components/MetaTags';
 
 const validEmail = (email) => {
   const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
